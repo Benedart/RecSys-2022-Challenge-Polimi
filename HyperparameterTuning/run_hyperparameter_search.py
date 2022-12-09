@@ -882,7 +882,7 @@ def runHyperparameterSearch_Collaborative(recommender_class, URM_train, URM_trai
         if recommender_class is PureSVDRecommender:
 
             hyperparameters_range_dictionary = {
-                "num_factors": Integer(1, 350),
+                "num_factors": Integer(1, 500),
             }
 
             recommender_input_args = SearchInputRecommenderArgs(
@@ -964,8 +964,8 @@ def runHyperparameterSearch_Collaborative(recommender_class, URM_train, URM_trai
 
             hyperparameters_range_dictionary = {
                 "topK": Integer(5, 1e4),
-                "l1_ratio": Real(low = 1e-5, high = 1.0, prior = 'log-uniform'),
-                "alpha": Real(low = 1e-3, high = 1.0, prior = 'uniform'),
+                "l1_ratio": Real(low = 1e-7, high = 1.0, prior = 'log-uniform'),
+                "alpha": Real(low = 1e-5, high = 1.0, prior = 'uniform'),
             }
 
             recommender_input_args = SearchInputRecommenderArgs(
