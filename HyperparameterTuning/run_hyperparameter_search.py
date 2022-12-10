@@ -424,12 +424,12 @@ def run_KNNRecommender_on_similarity_type(similarity_type, hyperparameterSearch,
     is_set_similarity = similarity_type in ["tversky", "dice", "jaccard", "tanimoto"]
 
     if similarity_type == "asymmetric":
-        hyperparameters_range_dictionary["asymmetric_alpha"] = Real(low = 0, high = 2, prior = 'uniform')
+        hyperparameters_range_dictionary["asymmetric_alpha"] = Real(low = 0, high = 3, prior = 'uniform')
         hyperparameters_range_dictionary["normalize"] = Categorical([True])
 
     elif similarity_type == "tversky":
-        hyperparameters_range_dictionary["tversky_alpha"] = Real(low = 0, high = 2, prior = 'uniform')
-        hyperparameters_range_dictionary["tversky_beta"] = Real(low = 0, high = 2, prior = 'uniform')
+        hyperparameters_range_dictionary["tversky_alpha"] = Real(low = 0, high = 3, prior = 'uniform')
+        hyperparameters_range_dictionary["tversky_beta"] = Real(low = 0, high = 3, prior = 'uniform')
         hyperparameters_range_dictionary["normalize"] = Categorical([True])
 
     elif similarity_type == "euclidean":
