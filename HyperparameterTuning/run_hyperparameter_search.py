@@ -364,7 +364,7 @@ def runHyperparameterSearch_Hybrid(recommender_class, URM_train, ICM_object, ICM
                 CONSTRUCTOR_KEYWORD_ARGS = {},
                 FIT_POSITIONAL_ARGS = [],
                 FIT_KEYWORD_ARGS = {},
-                EARLYSTOPPING_KEYWORD_ARGS = earlystopping_keywargs,
+                EARLYSTOPPING_KEYWORD_ARGS = {},
             )
 
        #########################################################################################################
