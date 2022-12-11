@@ -59,6 +59,8 @@ from Recommenders.FeatureWeighting.Cython.CFW_D_Similarity_Cython import CFW_D_S
 from Recommenders.FeatureWeighting.Cython.CFW_DVV_Similarity_Cython import CFW_DVV_Similarity_Cython
 from Recommenders.FeatureWeighting.Cython.FBSM_Rating_Cython import FBSM_Rating_Cython
 
+from Recommenders.MatrixFactorization.IALSRecommender import FeatureCombinedImplicitALSRecommender
+
 ######################################################################
 from skopt.space import Real, Integer, Categorical
 import traceback
@@ -348,6 +350,22 @@ def runHyperparameterSearch_Hybrid(recommender_class, URM_train, ICM_object, ICM
                     EARLYSTOPPING_KEYWORD_ARGS = earlystopping_keywargs,
                 )
 
+        elif recommender_class is FeatureCombinedImplicitALSRecommender:
+
+            hyperparameters_range_dictionary = {
+                "urm_alpha": Real(low = 40, high = 100, prior = 'uniform'),
+                "icm_alpha": Real(low = 40, high = 100, prior = 'uniform'),
+                "factors": Integer(low = 100, high = 400),
+                "epochs": Integer(low = 10, high = 100),
+            }
+
+            recommender_input_args = SearchInputRecommenderArgs(
+                CONSTRUCTOR_POSITIONAL_ARGS = [URM_train, ICM_object],
+                CONSTRUCTOR_KEYWORD_ARGS = {},
+                FIT_POSITIONAL_ARGS = [],
+                FIT_KEYWORD_ARGS = {},
+                EARLYSTOPPING_KEYWORD_ARGS = earlystopping_keywargs,
+            )
 
        #########################################################################################################
 
