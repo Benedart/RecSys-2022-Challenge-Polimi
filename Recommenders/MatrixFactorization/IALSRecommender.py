@@ -229,13 +229,14 @@ class FeatureCombinedImplicitALSRecommender(BaseMatrixFactorizationRecommender):
         return C
 
     def fit(self,
+            iterations=15,
             factors=100,
+            urm_alpha=1,
+            icm_alpha=1,
             regularization=0.01,
             use_native=True, use_cg=True, use_gpu=False,
-            iterations=15,
             calculate_training_loss=False, num_threads=0,
             confidence_scaling=None,
-            **confidence_args
             ):
 
         self.rec = implicit.als.AlternatingLeastSquares(factors=factors, regularization=regularization,
@@ -248,11 +249,11 @@ class FeatureCombinedImplicitALSRecommender(BaseMatrixFactorizationRecommender):
             combine(
                 confidence_scaling(
                     self.ICM_train,
-                    **confidence_args['ICM']
+                    icm_alpha
                 ),
                 confidence_scaling(
                     self.URM_train,
-                    **confidence_args['URM']
+                    urm_alpha
                 )
             ),
             show_progress=self.verbose)

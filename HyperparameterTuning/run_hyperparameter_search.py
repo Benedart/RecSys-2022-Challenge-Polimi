@@ -353,10 +353,10 @@ def runHyperparameterSearch_Hybrid(recommender_class, URM_train, ICM_object, ICM
         elif recommender_class is FeatureCombinedImplicitALSRecommender:
 
             hyperparameters_range_dictionary = {
-                "urm_alpha": Real(low = 40, high = 100, prior = 'uniform'),
-                "icm_alpha": Real(low = 40, high = 100, prior = 'uniform'),
+                "urm_alpha": Real(low = 30, high = 100, prior = 'uniform'),
+                "icm_alpha": Real(low = 30, high = 100, prior = 'uniform'),
                 "factors": Integer(low = 100, high = 400),
-                "epochs": Integer(low = 10, high = 100),
+                "iterations": Integer(low = 10, high = 100),
             }
 
             recommender_input_args = SearchInputRecommenderArgs(
