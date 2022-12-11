@@ -237,6 +237,7 @@ class FeatureCombinedImplicitALSRecommender(BaseMatrixFactorizationRecommender):
             use_native=True, use_cg=True, use_gpu=False,
             calculate_training_loss=False, num_threads=0,
             confidence_scaling=None,
+            **earlystopping_kwargs
             ):
 
         self.rec = implicit.als.AlternatingLeastSquares(factors=factors, regularization=regularization,
