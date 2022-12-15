@@ -1034,7 +1034,7 @@ def runHyperparameterSearch_Collaborative(recommender_class, URM_train, URM_trai
                 CONSTRUCTOR_KEYWORD_ARGS = {},
                 FIT_POSITIONAL_ARGS = [],
                 FIT_KEYWORD_ARGS = {},
-                EARLYSTOPPING_KEYWORD_ARGS = earlystopping_keywargs,
+                EARLYSTOPPING_KEYWORD_ARGS = {} #earlystopping_keywargs,
             )
 
         #########################################################################################################
