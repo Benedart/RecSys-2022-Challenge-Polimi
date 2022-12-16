@@ -637,7 +637,7 @@ def runHyperparameterSearch_Collaborative(recommender_class, URM_train, URM_trai
     if not os.path.exists(output_folder_path):
         os.makedirs(output_folder_path)
 
-    earlystopping_keywargs = {"validation_every_n": 5,
+    earlystopping_keywargs = {"validation_every_n": 50,
                               "stop_on_validation": True,
                               "evaluator_object": evaluator_validation_earlystopping,
                               "lower_validations_allowed": 5,
