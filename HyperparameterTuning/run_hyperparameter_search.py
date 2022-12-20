@@ -265,13 +265,13 @@ def runHyperparameterSearch_Hybrid(recommender_class, URM_train, ICM_object, ICM
         if recommender_class in [ItemKNN_CFCBF_Hybrid_Recommender, UserKNN_CFCBF_Hybrid_Recommender]:
 
             if similarity_type_list is None:
-                similarity_type_list = ["tversky"]
+                similarity_type_list = ['cosine', 'jaccard', "asymmetric", "dice", "tversky"]
 
 
             hyperparameters_range_dictionary = {}
 
             if recommender_class is ItemKNN_CFCBF_Hybrid_Recommender:
-                hyperparameters_range_dictionary["ICM_weight"] = Real(low = 1e-2, high = 10, prior = 'log-uniform')
+                hyperparameters_range_dictionary["ICM_weight"] = Real(low = 1e-2, high = 1e2, prior = 'log-uniform')
 
             elif recommender_class is UserKNN_CFCBF_Hybrid_Recommender:
                 hyperparameters_range_dictionary["UCM_weight"] = Real(low = 1e-2, high = 1e2, prior = 'log-uniform')
