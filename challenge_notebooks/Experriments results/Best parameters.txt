@@ -62,4 +62,4 @@ colsample_bytree = 0.6113704247857885
 gamma = 8.964184693722684
 min_child_weight = 7.0
 
-Added features: ItemKNN_CFCBF - UserKNN - BPR - Item pop - User profile length - type (1-hot) - length
+Added features: SLIM Elastic - UserKNN - Item pop - User profile length - type (1-hot) - length
