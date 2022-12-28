@@ -1,0 +1,27 @@
+OPTIMIZED XGBOOST
+Hybrid: 0.045447
+Boosted: 0.05519
+Cat: 0.04986
+
+OPTIMIZED XGBOOST - ADDING RP3Beta
+Hybrid: 0.045447
+Boosted: 0.05313
+Cat: 0.04893
+
+
+****** From now on, xgboost will always be optimized unless specified ****** 
+
+IMPROVED HYBRID - No RP3Beta
+Hybrid: 0.04551
+Boosted: 0.05476
+Cat: 0.0500
+
+CUTOFF TESTS: 20 training - 20 test
+Hybrid: 0.04551
+Boosted: 0.054032
+Cat: 0.049656
+
+50 both
+Hybrid: 0.04551
+Boosted: 0.05866
+Cat: 0.0513
