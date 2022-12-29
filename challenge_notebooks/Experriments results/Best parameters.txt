@@ -4,13 +4,14 @@ SLIM Elastic:
 topK= 6468 
 l1_ratio= 0.03534306561986866 
 alpha= 0.001
+MAP (train+validation):
 
 RP3Beta:
-topK= 56
-alpha= 0.7081523573549109
-beta= 0.29000703521727095
+topK= 63
+alpha= 0.7156255552821021
+beta= 0.2909773816927966
 normalize_similarity= True
-
+MAP (train+validation): 0.02556
 
 ItemKNN_CFCBF:
 topK= 34, 
@@ -20,6 +21,7 @@ normalize= True,
 asymmetric_alpha= 0.2767555977453418, 
 feature_weighting= 'TF-IDF', 
 ICM_weight= 0.012287989884415986
+MAP (train+validation):
 
 UserKNN:
 topK= 633, 
@@ -27,6 +29,7 @@ shrink= 0,
 similarity= 'cosine', 
 normalize= True,
 feature_weighting= 'TF-IDF'
+MAP (train+validation):
 
 SLIM BPR:
 topK= 18, 
@@ -36,6 +39,15 @@ sgd_mode= "adagrad",
 lambda_i= 0.00028544929663750347, 
 lambda_j= 0.01, 
 learning_rate= 0.1
+MAP (train+validation):
+
+IALS:
+epochs=51,
+num_factors=80,
+l1_ratio=1.7309823112126217,
+epsilon=0.8270313700957546,
+reg=0.3394358579939232
+MAP (train): 0.01354209537274693
 
 ************************ HYBRID ************************ 
 
