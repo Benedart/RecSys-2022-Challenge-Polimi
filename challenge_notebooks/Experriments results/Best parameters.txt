@@ -4,14 +4,14 @@ SLIM Elastic:
 topK= 6468 
 l1_ratio= 0.03534306561986866 
 alpha= 0.001
-MAP (train+validation):
+MAP (train+validation): 0.27753
 
 RP3Beta:
 topK= 63
-alpha= 0.7156255552821021
-beta= 0.2909773816927966
+alpha= 0.6871585126786798
+beta= 0.2893401754537936
 normalize_similarity= True
-MAP (train+validation): 0.02556
+MAP (train+validation): 0.025589
 
 ItemKNN_CFCBF:
 topK= 34, 
@@ -42,12 +42,12 @@ learning_rate= 0.1
 MAP (train+validation):
 
 IALS:
-epochs=51,
-num_factors=80,
-l1_ratio=1.7309823112126217,
-epsilon=0.8270313700957546,
-reg=0.3394358579939232
-MAP (train): 0.01354209537274693
+epochs=36,
+num_factors=66,
+epsilon=0.11439743377260302,
+reg=0.05919330134993278
+alpha=1.9719079397640047
+MAP (train+validation): 0.019697176141411345
 
 ************************ HYBRID ************************ 
 
