@@ -61,7 +61,7 @@ MAP (train+validation): 0.028029
 
 ************************ XGBOOST ************************ 
 
-Best Cutoff: 50
+Best Cutoff: 80
 
 n_estimators = 1000
 learning_rate = 0.19823429576094637
