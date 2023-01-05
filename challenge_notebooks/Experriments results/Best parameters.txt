@@ -1,9 +1,11 @@
 ************************ MODELS ************************ 
 
 SLIM Elastic:
-topK= 6468 
-l1_ratio= 0.03534306561986866 
-alpha= 0.001
+{
+    "topK": 6468,
+    "l1_ratio": 0.03534306561986866,
+    "alpha": 0.001,
+}
 MAP (train+validation): 0.27753
 
 RP3Beta:
@@ -14,24 +16,28 @@ normalize_similarity= True
 MAP (train+validation): 0.025589
 
 ItemKNN_CFCBF:
-topK= 34, 
-shrink= 93, 
-similarity= 'asymmetric', 
-normalize= True,
-asymmetric_alpha= 0.2767555977453418, 
-feature_weighting= 'TF-IDF', 
-ICM_weight= 0.012287989884415986
-MAP (train+validation):
+{
+    "topK": 34, 
+    "shrink": 93, 
+    "similarity": 'asymmetric', 
+    "normalize": True,
+    "asymmetric_alpha": 0.2767555977453418, 
+    "feature_weighting": 'TF-IDF', 
+    "ICM_weight": 0.012287989884415986
+}
+MAP (train+validation): 0.024546
 
 UserKNN:
 {
-    'topK': 722,
-    'shrink': 0,
+    'topK': 570,
+    'shrink': 197,
     'similarity': 'asymmetric',
-    'asymmetric_alpha': 0.4379480757608301,
-    'normalize': True
+    'asymmetric_alpha': 0.5016128296674885,
+    'normalize': True,
+    'feature_weighting': 'BM25',
+    'URM_bias': 71.84496171909362
 }
-MAP (train+validation): 0.023314
+MAP (train+validation): 0.024389
 
 SLIM BPR:
 topK= 18, 
@@ -44,11 +50,13 @@ learning_rate= 0.1
 MAP (train+validation):
 
 IALS:
-{'epochs': 34,
- 'num_factors': 79,
- 'alpha': 5.743821416717141,
- 'epsilon': 0.3498236011181738,
- 'reg': 0.13292125016403122}
+{
+    'epochs': 34,
+    'num_factors': 79,
+    'alpha': 5.743821416717141,
+    'epsilon': 0.3498236011181738,
+    'reg': 0.13292125016403122
+}
 MAP (train+validation): 0.019884
 
 ************************ HYBRID ************************ 
