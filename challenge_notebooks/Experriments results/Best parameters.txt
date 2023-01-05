@@ -24,12 +24,14 @@ ICM_weight= 0.012287989884415986
 MAP (train+validation):
 
 UserKNN:
-topK= 633, 
-shrink= 0, 
-similarity= 'cosine', 
-normalize= True,
-feature_weighting= 'TF-IDF'
-MAP (train+validation):
+{
+    'topK': 722,
+    'shrink': 0,
+    'similarity': 'asymmetric',
+    'asymmetric_alpha': 0.4379480757608301,
+    'normalize': True
+}
+MAP (train+validation): 0.023314
 
 SLIM BPR:
 topK= 18, 
@@ -61,7 +63,7 @@ MAP (train+validation): 0.028029
 
 ************************ XGBOOST ************************ 
 
-Best Cutoff: 80
+Best Cutoff: 80 (forse)
 
 n_estimators = 1000
 learning_rate = 0.19823429576094637
@@ -78,4 +80,11 @@ colsample_bytree = 0.6113704247857885
 gamma = 8.964184693722684
 min_child_weight = 7.0
 
-Added features: SLIM Elastic - UserKNN - Item pop - User profile length - type (1-hot) - length
+Added features: 
+Hybrid
+Elastic
+RP3Beta
+ItemKNN_CFCBF
+UserKNN
+IALS
+Item pop - User profile length - type (1-hot) - length
