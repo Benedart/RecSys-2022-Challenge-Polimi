@@ -8,10 +8,10 @@ MAP (train+validation): 0.27753
 
 RP3Beta:
 topK= 63
-alpha= 0.6871585126786798
-beta= 0.2893401754537936
+alpha= 0.6828387166323279
+beta= 0.2930220842625131
 normalize_similarity= True
-MAP (train+validation): 0.025589
+MAP (train+validation): 0.025603
 
 ItemKNN_CFCBF:
 topK= 34, 
@@ -39,14 +39,14 @@ sgd_mode= "adagrad",
 lambda_i= 0.00028544929663750347, 
 lambda_j= 0.01, 
 learning_rate= 0.1
-MAP (train+validation):
+MAP (train+validation): 0.022948
 
 IALS:
-{'epochs': 34,
- 'num_factors': 79,
- 'alpha': 5.743821416717141,
- 'epsilon': 0.3498236011181738,
- 'reg': 0.13292125016403122}
+{epochs=34,
+ num_factors=79,
+ alpha=5.743821416717141,
+ epsilon=0.3498236011181738,
+ reg=0.13292125016403122}
 MAP (train+validation): 0.019884
 
 ************************ HYBRID ************************ 
@@ -56,7 +56,24 @@ Hybrid weights:
  'rp3_weight': 1.2908882799364896,
  'ials_weight': 0.07325806338856197,
  'userKnn_weight': 0.00026154879681528466
-MAP (train+validation): 0.028029 
+MAP (train+validation): 0.028029 		//non confermato
+
+
+Hybrid weights **adjusted only bpr weights**  04/01/2023
+{'slim_weight': 2.2128323200703557,
+ 'rp3_weight': 1.7214988710045596,
+ 'ials_weight': 0.0675855407513435,
+ 'slim_bpr_weight': 0.07109872396074755}
+MAP (train+validation): 0.028017          | 0.28053
+MAP (train+validation) on half dataset: x | 0.009294
+
+Hybrid weights **adjusted only bpr weights** **optimized for first half of the dataset
+{'slim_weight': 1.0610053481183237,
+ 'rp3_weight': 0.7054781902263766,
+ 'ials_weight': 0.12368450364702792,
+ 'slim_bpr_weight': 1.2491958607094011}
+MAP (train+validation) on whole dataset: 0.028001 |  0.028057
+MAP (train+validation) on half dataset:      x    |  0.009386
 
 
 ************************ XGBOOST ************************ 
