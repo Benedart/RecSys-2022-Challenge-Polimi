@@ -17,15 +17,16 @@ MAP (train+validation): 0.025603
 
 ItemKNN_CFCBF:
 {
-    "topK": 34, 
-    "shrink": 93, 
-    "similarity": 'asymmetric', 
-    "normalize": True,
-    "asymmetric_alpha": 0.2767555977453418, 
-    "feature_weighting": 'TF-IDF', 
-    "ICM_weight": 0.012287989884415986
+    'ICM_weight': 0.7942705620438129,
+    'topK': 57,
+    'shrink': 46,
+    'similarity': 'asymmetric',
+    'asymmetric_alpha': 1.0078079911435072,
+    'normalize': True,
+    'feature_weighting': 'BM25',
+    'ICM_bias': 0.05378471200597431
 }
-MAP (train+validation): 0.024546
+MAP (train+validation): 0.024628
 
 UserKNN:
 {
