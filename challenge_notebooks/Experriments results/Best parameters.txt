@@ -15,6 +15,13 @@ beta= 0.2930220842625131
 normalize_similarity= True
 MAP (train+validation): 0.025603
 
+RP3Beta: (mettendo a 2 le interazioni doppie)
+topK= 56
+alpha= 0.8364304419463466
+beta= 0.3543580610845257
+normalize_similarity= True
+MAP (train+validation): 0.025791
+
 ItemKNN_CFCBF:
 {
     "topK": 34, 
