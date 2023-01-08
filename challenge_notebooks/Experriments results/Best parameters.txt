@@ -1,71 +1,73 @@
 ************************ MODELS ************************ 
 
-SLIM Elastic:
-{
-    "topK": 6468,
-    "l1_ratio": 0.03534306561986866,
-    "alpha": 0.001,
-}
-MAP (train+validation): 0.27753
-
-RP3Beta:
-topK= 63
-alpha= 0.6828387166323279
-beta= 0.2930220842625131
-normalize_similarity= True
-MAP (train+validation): 0.025603
-
-RP3Beta: (mettendo a 2 le interazioni doppie)
-topK= 56
-alpha= 0.8364304419463466
-beta= 0.3543580610845257
-normalize_similarity= True
-MAP (train+validation): 0.025791
-
-ItemKNN_CFCBF:
-{
-    'ICM_weight': 0.7942705620438129,
-    'topK': 57,
-    'shrink': 46,
-    'similarity': 'asymmetric',
-    'asymmetric_alpha': 1.0078079911435072,
-    'normalize': True,
-    'feature_weighting': 'BM25',
-    'ICM_bias': 0.05378471200597431
-}
-MAP (train+validation): 0.024628
-
-UserKNN:
-{
-    'topK': 570,
-    'shrink': 197,
-    'similarity': 'asymmetric',
-    'asymmetric_alpha': 0.5016128296674885,
-    'normalize': True,
-    'feature_weighting': 'BM25',
-    'URM_bias': 71.84496171909362
-}
-MAP (train+validation): 0.024389
-
-SLIM BPR:
-topK= 18, 
-epochs= 450, 
-symmetric= False, 
-sgd_mode= "adagrad", 
-lambda_i= 0.00028544929663750347, 
-lambda_j= 0.01, 
-learning_rate= 0.1
-MAP (train+validation): 0.022948
-
-IALS:
-{
-    'epochs': 34,
-    'num_factors': 79,
-    'alpha': 5.743821416717141,
-    'epsilon': 0.3498236011181738,
-    'reg': 0.13292125016403122
-}
-MAP (train+validation): 0.019884
+SLIM Elastic:	
+				
+{*vanilla urm*					|*+0.2 interazioni doppie*		|*-0.1 interazioni singoli 0*		|
+    "topK": 6468,				|'topK': 3054				|'topK': 4713				|
+    "l1_ratio": 0.03534306561986866,		|l1_ratio': 0.04424799535913358		|'l1_ratio': 0.040759838758538156	|
+    "alpha": 0.001,				|alpha = 0.0011635794316003463		|'alpha': 0.0009005898859619071		|
+}						|					|					|
+MAP (train+validation): 0.027753		|MAP (train+validation): 0.027851	|MAP (train+validation): 0.027765	|
+------------------------------------------------+---------------------------------------+---------------------------------------+
+						|					|					|
+RP3Beta:					|*+1 interazioni doppie*		|					|
+topK= 63					|topK= 56				|					|
+alpha= 0.6828387166323279			|alpha= 0.8364304419463466		|					|
+beta= 0.2930220842625131			|beta= 0.3543580610845257		|					|
+normalize_similarity= True			|normalize_similarity= True		|					|
+MAP (train+validation): 0.025603		|MAP (train+validation): 0.025791	|					|
+------------------------------------------------+---------------------------------------+---------------------------------------+
+						|
+ItemKNN_CFCBF:					|
+{						|
+    'ICM_weight': 0.7942705620438129,		|
+    'topK': 57,					|
+    'shrink': 46,				|
+    'similarity': 'asymmetric',			|
+    'asymmetric_alpha': 1.0078079911435072,	|
+    'normalize': True,				|
+    'feature_weighting': 'BM25',		|
+    'ICM_bias': 0.05378471200597431		|
+}						|
+MAP (train+validation): 0.024628		|
+------------------------------------------------+---------------------------------------+---------------------------------------+
+						|
+UserKNN:					|
+{						|
+    'topK': 570,				|
+    'shrink': 197,				|
+    'similarity': 'asymmetric',			|
+    'asymmetric_alpha': 0.5016128296674885,	|
+    'normalize': True,				|
+    'feature_weighting': 'BM25',		|
+    'URM_bias': 71.84496171909362		|
+}						|
+MAP (train+validation): 0.024389		|
+------------------------------------------------+---------------------------------------+---------------------------------------+
+						|
+SLIM BPR:					|
+topK= 18, 					|
+epochs= 450, 					|
+symmetric= False, 				|
+sgd_mode= "adagrad", 				|
+lambda_i= 0.00028544929663750347, 		|
+lambda_j= 0.01, 				|
+learning_rate= 0.1				|
+MAP (train+validation): 0.022948		|
+						|
+------------------------------------------------+---------------------------------------+---------------------------------------+
+						|
+IALS:						|
+{						|
+    'epochs': 34,				|
+    'num_factors': 79,				|
+    'alpha': 5.743821416717141,			|
+    'epsilon': 0.3498236011181738,		|
+    'reg': 0.13292125016403122			|
+}						|
+MAP (train+validation): 0.019884		|
+						|
+------------------------------------------------+---------------------------------------+---------------------------------------+
 
 ************************ HYBRID ************************ 
 
