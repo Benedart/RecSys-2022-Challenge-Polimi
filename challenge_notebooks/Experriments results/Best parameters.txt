@@ -2,15 +2,15 @@
 
 SLIM Elastic:	
 				
-{*vanilla urm*					|*+0.2 interazioni doppie*		|*-0.1 interazioni singoli 0*		|*-0.2 interazioni singoli 0*		|
-    "topK": 6468,				|'topK': 3054				|'topK': 4713				|'topK': 2870				
-    "l1_ratio": 0.03534306561986866,		|l1_ratio': 0.04424799535913358		|'l1_ratio': 0.040759838758538156	|'l1_ratio': 0.03136033017835964	
-    "alpha": 0.001,				|alpha = 0.0011635794316003463		|'alpha': 0.0009005898859619071		|'alpha': 0.0011624718660470815	
-}						|					|					|
-MAP (train+validation): 0.027753		|MAP (train+validation): 0.027851	|MAP (train+validation): 0.027765	|MAP (train+validation): 0.027775
+{*vanilla urm*					|*urm 2.0*				|
+    "topK": 6468,				|bonus: +0.2, malus: 0			|
+    "l1_ratio": 0.03534306561986866,		|'topK': 3054 				|
+    "alpha": 0.001,				|l1_ratio': 0.04424799535913358		|
+}						|alpha = 0.0011635794316003463		|										
+MAP (train+validation): 0.027753		|MAP (train+validation): 0.027851	|
 ------------------------------------------------+---------------------------------------+---------------------------------------+
 						|					|					|
-RP3Beta:					|*+1 interazioni doppie*		|					|
+RP3Beta:					|bonus: +1, malus: 0			|					|
 topK= 63					|topK= 56				|					|
 alpha= 0.6828387166323279			|alpha= 0.8364304419463466		|					|
 beta= 0.2930220842625131			|beta= 0.3543580610845257		|					|
