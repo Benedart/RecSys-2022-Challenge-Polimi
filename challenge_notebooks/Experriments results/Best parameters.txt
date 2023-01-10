@@ -70,15 +70,15 @@ MAP (train+validation): 0.019924 (0.019815??) (0.019961)
 						|
 ------------------------------------------------+---------------------------------------+---------------------------------------+
 
+
 ************************ HYBRID ************************ 
 
 Hybrid weights:
-'slim_weight': 2.005938459112213,
- 'rp3_weight': 1.2908882799364896,
- 'ials_weight': 0.07325806338856197,
- 'userKnn_weight': 0.00026154879681528466
-MAP (train+validation): 0.028029 		//non confermato
+'slim_weight': 2.097339118738173,
+'rp3_weight': 1.0568674680305168,
+'ials_weight': 0.1617624215703209
 
+MAP (train+validation): 0.028082
 
 Hybrid weights **adjusted only bpr weights**  04/01/2023
 {'slim_weight': 2.2128323200703557,
@@ -97,9 +97,10 @@ MAP (train+validation) on whole dataset: 0.028001 |  0.028057
 MAP (train+validation) on half dataset:      x    |  0.009386
 
 
+
 ************************ XGBOOST ************************ 
 
-Best Cutoff: 80 (forse)
+Best Cutoff: 35 (forse)
 
 n_estimators = 1000
 learning_rate = 0.19823429576094637
@@ -118,7 +119,7 @@ min_child_weight = 7.0
 
 Added features: 
 Hybrid
-Elastic
+SLIM_Elastic
 RP3Beta
 ItemKNN_CFCBF
 UserKNN
