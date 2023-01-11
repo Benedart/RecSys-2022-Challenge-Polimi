@@ -73,28 +73,16 @@ MAP (train+validation): 0.019924 (0.019815??) (0.019961)
 
 ************************ HYBRID ************************ 
 
-Hybrid weights:
-'slim_weight': 2.097339118738173,
-'rp3_weight': 1.0568674680305168,
-'ials_weight': 0.1617624215703209
+Bonus/Malus:
+SLIM 0.25 | 0.2
+RP3 0.75 | 0
+Ials 0 | 0
 
-MAP (train+validation): 0.028082
+Weights:
+hybrid = GeneralizedLinearHybridRecommender(urm_train_validation, [SlimE, RP3, ials])
+hybrid.fit([2.057629061768366, 1.558966879154469, 0.08476762363426302])
 
-Hybrid weights **adjusted only bpr weights**  04/01/2023
-{'slim_weight': 2.2128323200703557,
- 'rp3_weight': 1.7214988710045596,
- 'ials_weight': 0.0675855407513435,
- 'slim_bpr_weight': 0.07109872396074755}
-MAP (train+validation): 0.028017          | 0.28053
-MAP (train+validation) on half dataset: x | 0.009294
-
-Hybrid weights **adjusted only bpr weights** **optimized for first half of the dataset
-{'slim_weight': 1.0610053481183237,
- 'rp3_weight': 0.7054781902263766,
- 'ials_weight': 0.12368450364702792,
- 'slim_bpr_weight': 1.2491958607094011}
-MAP (train+validation) on whole dataset: 0.028001 |  0.028057
-MAP (train+validation) on half dataset:      x    |  0.009386
+MAP (train+validation): 0.028107
 
 
 
