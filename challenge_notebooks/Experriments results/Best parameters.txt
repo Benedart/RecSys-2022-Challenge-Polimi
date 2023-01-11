@@ -82,7 +82,7 @@ Weights:
 hybrid = GeneralizedLinearHybridRecommender(urm_train_validation, [SlimE, RP3, ials])
 hybrid.fit([2.057629061768366, 1.558966879154469, 0.08476762363426302])
 
-MAP (train+validation): 0.028107
+MAP (train+validation): 0.028179
 
 
 
