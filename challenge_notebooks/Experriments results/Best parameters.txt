@@ -2,12 +2,12 @@
 
 SLIM Elastic:	
 				
-{*vanilla urm*					|*urm 2.0*				|
-    "topK": 6468,				|bonus: +0.2, malus: 0			|
-    "l1_ratio": 0.03534306561986866,		|'topK': 3054 				|
-    "alpha": 0.001,				|l1_ratio': 0.04424799535913358		|
-}						|alpha = 0.0011635794316003463		|										
-MAP (train+validation): 0.027753		|MAP (train+validation): 0.027851	|
+{*vanilla urm*					|*urm 2.0*				|urm 2.0 + stacking (alpha=0.5633154480471164)
+    "topK": 6468,				|bonus: +0.2, malus: 0			|bonus: 0.25, fake malus: 0.15, real malus: 0
+    "l1_ratio": 0.03534306561986866,		|'topK': 3054 				|topK: 2026
+    "alpha": 0.001,				|l1_ratio': 0.04424799535913358		|l1_ratio: 0.10985234148570669
+}						|alpha = 0.0011635794316003463		|alpha: 0.0001258298378771297
+MAP (train+validation): 0.027753		|MAP (train+validation): 0.027851	|MAP (train+validation): 0.027928
 ------------------------------------------------+---------------------------------------+---------------------------------------+
 						|					|					|
 RP3Beta:					|bonus: +1, malus: 0			|					|
