@@ -10,12 +10,12 @@ SLIM Elastic:
 MAP (train+validation): 0.027753		|MAP (train+validation): 0.027851	|MAP (train+validation): 0.027928
 ------------------------------------------------+---------------------------------------+---------------------------------------+
 						|					|					|
-RP3Beta:					|bonus: +1, malus: 0			|					|
-topK= 63					|topK= 56				|					|
-alpha= 0.6828387166323279			|alpha= 0.8364304419463466		|					|
-beta= 0.2930220842625131			|beta= 0.3543580610845257		|					|
+RP3Beta:					|bonus: 0.75, malus: 0			|					|
+topK= 63					|topK= 50				|					|
+alpha= 0.6828387166323279			|alpha= 0.8552186583443476		|					|
+beta= 0.2930220842625131			|beta= 0.3382669103515696		|					|
 normalize_similarity= True			|normalize_similarity= True		|					|
-MAP (train+validation): 0.025603		|MAP (train+validation): 0.025791	|					|
+MAP (train+validation): 0.025603		|MAP (train+validation): 0.025854	|					|
 ------------------------------------------------+---------------------------------------+---------------------------------------+
 						|
 ItemKNN_CFCBF:					|
@@ -74,15 +74,28 @@ MAP (train+validation): 0.019924 (0.019815??) (0.019961)
 ************************ HYBRID ************************ 
 
 Bonus/Malus:
-SLIM 0.25 | 0.2
-RP3 0.75 | 0
-Ials 0 | 0
+SLIM 0.25 | 0.2 | 0
+RP3 0.75 | 0 | 0
+Ials 0 | 0 | 0
 
 Weights:
 hybrid = GeneralizedLinearHybridRecommender(urm_train_validation, [SlimE, RP3, ials])
 hybrid.fit([2.057629061768366, 1.558966879154469, 0.08476762363426302])
 
 MAP (train+validation): 0.028179
+
+Bonus/Malus:
+SLIM 0.25 | 0.15 | 0 + stacking
+RP3 0.75 | 0 | 0
+Ials 0 | 0 | 0
+
+Weights:
+'slim_weight': 1.8888069225803399,
+ 'rp3_weight': 0.6951792429618135,
+ 'ials_weight': 0.04684711158163043
+
+hybrid = GeneralizedLinearHybridRecommender(urm_train_validation, [SlimE, RP3, ials])
+MAP (train+validation): 0.028246
 
 
 
