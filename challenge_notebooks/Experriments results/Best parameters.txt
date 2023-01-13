@@ -12,10 +12,10 @@ MAP (train+validation): 0.027753		|MAP (train+validation): 0.027851	|MAP (train+
 						|					|					|
 RP3Beta:					|bonus: 0.75, malus: 0			|					|
 topK= 63					|topK= 50				|					|
-alpha= 0.6828387166323279			|alpha= 0.8552186583443476		|					|
-beta= 0.2930220842625131			|beta= 0.3382669103515696		|					|
+alpha= 0.6828387166323279			|alpha= 0.8642170093199429		|					|
+beta= 0.2930220842625131			|beta= 0.3388328690027886		|					|
 normalize_similarity= True			|normalize_similarity= True		|					|
-MAP (train+validation): 0.025603		|MAP (train+validation): 0.025854	|					|
+MAP (train+validation): 0.025603		|MAP (train+validation): 0.025862	|					|
 ------------------------------------------------+---------------------------------------+---------------------------------------+
 						|
 ItemKNN_CFCBF:					|
