@@ -101,7 +101,7 @@ MAP (train+validation): 0.028246
 
 ************************ XGBOOST ************************ 
 
-Best Cutoff: 35 (forse)
+Best Cutoff: 35
 
 n_estimators = 1000
 learning_rate = 0.19823429576094637
@@ -125,4 +125,5 @@ RP3Beta
 ItemKNN_CFCBF
 UserKNN
 IALS
+P3Alpha
 Item pop - User profile length - type (1-hot) - length
