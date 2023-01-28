@@ -11,11 +11,13 @@ This repo contains the code and the data used in the [Polimi's Recsys Challenge 
 <br>
 The goal of the competition was to create a recommender system for TV shows, providing 10 recommendations for each user.
 
+[RecSys Challenge presentation](https://github.com/Benedart/RecSys-2022-Challenge-Polimi/blob/main/RecSys%Presentation.pdf)
+
 ## Results
 
 * Ranked 1st
-* MAP@10 - private: 0.06213
-* MAP@10 - public: 0.06259
+* MAP@10 - private: &nbsp;0.06213
+* MAP@10 - public: &nbsp;&nbsp;&nbsp;0.06259
 
 ## Goal
 The application domain is TV shows recommendation. The datasets we provide contains both interactions of users with TV shows, as well as features related to the TV shows. The main goal of the competition is to discover which items (TV shows) a user will interact with.
@@ -44,6 +46,8 @@ Features:
 * Item genre
 * Item length
 * Predictions of other algorithms
+
+Further details can be found in the [presentation](https://github.com/Benedart/RecSys-2022-Challenge-Polimi/blob/main/RecSys%Presentation.pdf).
 
 ## Team
 * [Arturo Benedetti](https://github.com/Benedart)
