@@ -11,7 +11,7 @@ This repo contains the code and the data used in the [Polimi's Recsys Challenge 
 <br>
 The goal of the competition was to create a recommender system for TV shows, providing 10 recommendations for each user.
 
-[RecSys Challenge presentation](https://github.com/Benedart/RecSys-2022-Challenge-Polimi/blob/main/RecSys%Presentation.pdf)
+[RecSys Challenge presentation](https://github.com/Benedart/RecSys-2022-Challenge-Polimi/blob/main/RecSys%20Presentation.pdf)
 
 ## Results
 
@@ -47,7 +47,7 @@ Features:
 * Item length
 * Predictions of other algorithms
 
-Further details can be found in the [presentation](https://github.com/Benedart/RecSys-2022-Challenge-Polimi/blob/main/RecSys%Presentation.pdf).
+Further details can be found in the [presentation](https://github.com/Benedart/RecSys-2022-Challenge-Polimi/blob/main/RecSys%20Presentation.pdf).
 
 ## Team
 * [Arturo Benedetti](https://github.com/Benedart)
